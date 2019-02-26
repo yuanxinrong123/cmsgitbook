@@ -69,12 +69,12 @@
 * CMS_ARTICLE_PATH&emsp;文章路径
 * CMS_DIV_LOAD&emsp;加载静态文件
 ### 2.属性标签
-* S&emsp;站点&emsp;`${S['活动'].name}`
+* S&emsp;站点&emsp;${S['活动'].name}
 * SV&emsp;站点变量&emsp;`${SV['活动']['siteUrl']}`
 * CS&emsp;当前站点&emsp;{CS.name}
 * CSV&emsp;当前站点变量&emsp;${CSV['siteUrl']}
 * C&emsp;栏目&emsp;${C[‘00010002'].name}
-* CV&emsp;栏目变量&emsp;`<#assign e =CV[00010002']/>${e['hello']}`
+* CV&emsp;栏目变量&emsp;<#assign e =CV[00010002']/>${e['hello']}
 * CC&emsp;当前栏目&emsp;${CC.name}
 * CCV&emsp;当前栏目变量&emsp;${CCV['hello ']}
 * SS&emsp;站点风格&emsp;${SS}
