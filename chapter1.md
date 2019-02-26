@@ -62,9 +62,7 @@
 
 
 ## 二、CMS模板人员创建
-
 ### 1.自定义标签
-
 * CMS_ARTICLE_LIST&emsp;文章列表
 * CMS_ARTICLE_LIMIT&emsp;文章分页列表
 * CMS_COLUMN_LIST&emsp;栏目列表
