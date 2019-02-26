@@ -119,7 +119,7 @@ OR  所有条件是或的关系||</br>
 例如：
 ```
  <#list CMS_ARTICLE_LIST(clevelcode,10,'AND|活动编码,=,111000') as a>
- <@CMS_ARTICLE_LIMIT column=“${CC.levelCode}” pageDisplay=“10” uniqName=“uniqName“  where=“'AND|活动编码,=,111000'”; limitList, page,total,pageCount,pre,next> 
+ <@CMS_ARTICLE_LIMIT column="${CC.levelCode}" pageDisplay="10" uniqName="uniqName"  where="'AND|活动编码,=,111000'"; limitList, page,total,pageCount,pre,next> 
 ```
 8. CMS_DIV_LOAD（加载静态模块）</br>
 用来静态加载栏目下的首页（该标签基于jquery，需要引入相应的js）
