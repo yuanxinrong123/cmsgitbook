@@ -16,7 +16,7 @@
   </#list>    
 ```
 其中，CMS_ARTICLE_LIST('${e.id}',6)也可以写成：</br>
-`<#list CMS_ARTICLE_LIST ’00010002’,6) as a>`指定栏目</br>
-`<#list CMS_ARTICLE_LIST ’${e.levelcode}’,6) as a>` 先声明栏目变量e</br>
-`<#list CMS_ARTICLE_LIST ’${CC.levelcode}’,6) as a>` 当前栏目</br>
+`<#list CMS_ARTICLE_LIST '00010002',6) as a>`指定栏目</br>
+`<#list CMS_ARTICLE_LIST '${e.levelcode}',6) as a>` 先声明栏目变量e</br>
+`<#list CMS_ARTICLE_LIST '${CC.levelcode}',6) as a>` 当前栏目</br>
 
