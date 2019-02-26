@@ -70,7 +70,7 @@
 * CMS_DIV_LOAD&emsp;加载静态文件
 ### 2.属性标签
 * S&emsp;站点&emsp;${S['活动'].name}
-* SV&emsp;站点变量&emsp;`${SV['活动']['siteUrl']}`
+* SV&emsp;站点变量&emsp;${SV['活动']['siteUrl']}
 * CS&emsp;当前站点&emsp;{CS.name}
 * CSV&emsp;当前站点变量&emsp;${CSV['siteUrl']}
 * C&emsp;栏目&emsp;${C[‘00010002'].name}
