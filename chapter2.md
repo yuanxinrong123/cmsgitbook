@@ -20,3 +20,69 @@
 `<#list CMS_ARTICLE_LIST '${e.levelcode}',6) as a>` 先声明栏目变量e</br>
 `<#list CMS_ARTICLE_LIST '${CC.levelcode}',6) as a>` 当前栏目</br>
 
+2. CMS_ARTICLE_LIMIT文章分页列表
+```
+<div class="nrong2" id="limitPage">
+  <@CMS_ARTICLELIMIT column="${CC.levelCode}" pageDisplay="10" uniqName="uniqName";limitList,page,total,pageCount,pre,next>
+    <ul>
+      <#list limitList as nggz>
+        <li>
+          <a href="${CMS_ARTICLE_PATH('${CC.id}','${nggz.id}')}">${nggz.title}</a>
+        </li>
+      </#list>
+    </ul>
+</div>
+<div class="page">
+<table border="0" width="350">
+  <tbody>
+    <tr>
+      <td class="page1" width="50">第&nbsp;<span class="list2_xx">${page}</span>&nbsp;页</td>
+      <td class="page1" width="50">共&nbsp;<span class="list2_xx">${pageCount}</span>&nbsp;页&nbsp;&nbsp;</td>
+      <td width="50"><a href="#nogo" onclick="$('#limitPage').load('${CC.visitPath}/${ss}uniqName_1.html');"><img src="/images/home.jpg"></a></td>
+      <td width="50"><a href="#nogo" onclick="$('#limitPage').load('${CC.visitPath}/${ss}uniqName_${pre}.html');"><img src="/images/last.jpg"></a></td>
+      <td width="50"><a href="#nogo" onclick="$('#limitPage').load('${CC.visitPath}/${ss}uniqName_${next}.html');"><img src="/images/next.jpg"></a></td> <td width="50"><a href="#nogo" onclick="$('#limitPage').load('${CC.visitPath}/${ss}uniqName_${pageCount}.html');"><img src="/images/end.jpg" /></a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</@CMS_ARTICLE_LIMIT>
+<script>
+  $(document).ready(function){
+    $("#limitPage").load("${SS}uniqName_1.html")
+  }
+</script>
+```
+3. CMS_ARTICLE_LIMTI&emsp;文章分页列表的另一个实现方式（js实现）</br>
+使用js的实现方式需要引入实现分页的js文件
+```
+<script type="text/javascript" src="/js/jquery.pagination.js"></script>
+<script type="text/javascript" src="/js/splitPage.js"></script>
+```
+```
+<div  id='limitPage' >
+<@CMS_ARTICLE_LIMIT  column="${CC.levelCode}"  pageDisplay="5"  uniqName="uniqName"; limitList,page,total,pageCount,pre,next>
+  <div id = "pagination"></div>
+  <input type="hidden" id="pageNo" name="pageNo" value="1">
+   <script>
+    function aaaaa(){
+      var pg = document.getElementById("pageNo").value;
+      var urlp="${ss}uniqName_"+pg+".html";
+      $("#limitPage").load(urlp);
+    }
+    var funnames="aaaaa();";
+    initPagination(${pre+1},${total},5);
+   </script>
+</@CMS_ARTICLE_LIMIT>
+</div>
+<script>
+  $(document).ready(function(){
+     $("#limitPage").load("${SS}uniqName_1.html");
+  });
+</script>
+```
+其中：div的id："pagination"不能改变
+input的id:"pageNo"不能改变
+var funnames的名称"funnames"不能改变
+initPagination(${pre+1},${total},5)的三个参数，分别是当前页数，总条数，每页显示条数（要与标签中的pageDisplay的值保持一致，否则显示可能会有问题）
+
+
