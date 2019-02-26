@@ -115,7 +115,7 @@ initPagination(${pre+1},${total},5)的三个参数，分别是当前页数，总
 AND 是逻辑符号，所有条件是并的关系&&</br>
 OR  所有条件是或的关系||</br>
 文章基本属性包括 title、summary、keywords 和所对应表单字段</br>
-判断符包括：=、<、>、<=、>=、like；大于小于等是针对于文章字段是数值  类型
+判断符包括：=、`<`、`>`、<=、>=、like；大于小于等是针对于文章字段是数值  类型
 例如：
 ```
  <#list CMS_ARTICLE_LIST(clevelcode,10,'AND|活动编码,=,111000') as a>
