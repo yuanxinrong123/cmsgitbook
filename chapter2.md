@@ -80,9 +80,21 @@
   });
 </script>
 ```
-其中：div的id："pagination"不能改变
-input的id:"pageNo"不能改变
-var funnames的名称"funnames"不能改变
-initPagination(${pre+1},${total},5)的三个参数，分别是当前页数，总条数，每页显示条数（要与标签中的pageDisplay的值保持一致，否则显示可能会有问题）
+其中：div的id："pagination"不能改变;</br>
+input的id:"pageNo"不能改变;</br>
+var funnames的名称"funnames"不能改变;</br>
+initPagination(${pre+1},${total},5)的三个参数，分别是当前页数，总条数，每页显示条数（要与标签中的pageDisplay的值保持一致，否则显示可能会有问题)。
+4. CMS_ARTICLE_LIMIT多栏目读取方法</br>
+```
+<@CMS_ARTICLE_LIMIT column="00340001,00340002" pageDisplay="10" uniqName="uniqName" currentColumn="${CC.levelCode}" columnSCope="many" order="top_5";limitList,page,total,pageCount,pre,next>
+```
+在分页某单个栏目下文章，我们还可以使用以前的那样写法
+新增的属性有：
+* currentColumn="${CC.levelCode}" 必须要写这句 获得当前栏目
+* columnScope="many"  columnScope="sonson"  columnScope="son"   获取范围
+* order="top_5" order="level"; 排序方式</br>
+其中：当columnScope=many，即栏目可以写多个column="00340001,00340002"可以写多个没有关联的栏目</br>
+当columnScope=sonson，即该栏目下所有子孙栏目下面的所有文章，包括本栏目</br>
+当columnScope=son，即该栏目下所有儿子栏目下面的所有文章，包括本栏目</br>
 
 
