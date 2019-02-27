@@ -1,3 +1,33 @@
+## 二、CMS模板人员创建
+### 1.自定义标签
+* CMS_ARTICLE_LIST&emsp;文章列表
+* CMS_ARTICLE_LIMIT&emsp;文章分页列表
+* CMS_COLUMN_LIST&emsp;栏目列表
+* CMS_ARTICLE_PATH&emsp;文章路径
+* CMS_DIV_LOAD&emsp;加载静态文件
+
+### 2.属性标签
+* S&emsp;站点&emsp;```${S['活动'].name}```
+* SV&emsp;站点变量&emsp;```${SV['活动']['siteUrl']}```
+* CS&emsp;当前站点&emsp;```{CS.name}```
+* CSV&emsp;当前站点变量&emsp;```${CSV['siteUrl']}```
+* C&emsp;栏目&emsp;```${C['00010002'].name}```
+* CV&emsp;栏目变量&emsp;```<#assign e =CV[00010002']/>${e['hello']}```
+* CC&emsp;当前栏目&emsp;```${CC.name}```
+* CCV&emsp;当前栏目变量&emsp;```${CCV['hello']}```
+* SS&emsp;站点风格&emsp;```${SS}```
+
+&emsp;**只在内容模块中使用的标签**
+* CA&emsp;当前文章&emsp;```${CA.title}```,&emsp;表单字段&emsp;```${CA.fields.表单字段}```
+* CAIDX&emsp;当前文章编号&emsp;```${CAIDX}```
+* CLIST&emsp;当前文章所在栏目的文章列表&emsp;```<#list CLIST/>```
+
+&emsp;**模块自定义变量**
+&emsp;在模块添加的变量，在模块里调用${var}，不同的是在模版里挂接模块时候，都需要单独的设置一遍变量值，也就是说更改模块变量值不会改变模版时候所设置的变量值。
+
+
+
+
 ### 3.标签的详细用法
 1. CMS_ARTICLE_LIST&emsp;文章列表</br>
 ```
@@ -189,4 +219,112 @@ assign<br/>
 <#assign seasons = ["winter", "spring", "summer", "autumn"]>
 给变量test加1<#assign test = test + 1>
 ```
+11. 常用方法<br/>
+数字循环
+```
+1..5 表示从1到5，原型number..number
+对浮点取整数
+${123.23?int} 输出123
+```
+给变量赋值
+```
+${var?default(“hello world<br>”)?html}如果var is null那么将会被hello world<br>替代
+```
+判断对象是不是null
+```
+<#if mouse?exists>
+  Mouse found
+<#else>
+也可以直接${mouse?if_exists})输出布尔形
+```
+常用格式化日期
+```
+openingTime必须是Date型,详细查看freemarker文档 Reference->build-in referece->build-in for date
+${openingTime?date}
+${openingTime?date_time}
+${openingTime?time}
+```
+substring的用法
+```
+<#assign user=”hello jeen”>
+${user[0]}${user[4]}
+${user[1..4]}
+输出 :
+ho
+ello  
+```
+取得字符串的长度
+```
+var?length
+```
+大写输出字符
+```
+var?upper_case
+```
+小写输出字符
+```
+var?lower_case
+```
+首字母大写
+```
+var?cap_first
+```
+首字母小写
+```
+var?uncap_first
+```
+去掉字符串前后空格
+```
+var?trim
+```
+每个单词的首字符大写
+```
+var?capitalize
+```
+类似String.indexof: 
+```
+"babcdabcd"?index_of("abc") 返回1
+"babcdabcd"?index_of("abc",2) 返回5
+```
+类似String.lastIndexOf
+```
+last_index_of和String.lastIndexOf类似,同上
+```
+替换字符串 replace
+```
+${s?replace(‘ba’, ‘XY’ )}
+```
+注释标志
+```
+<#-- 
+  这里是注释
+-->
+```
+生成导航
+```
+<#assign lg = CC.levelCode?length/4>
+  <#list 1..lg as x>
+    <#assign s=CC.levelCode?substring(0,4*x)>
+    <#assign str=str+C[s].name+'-'>
+  </#list>
+${str}
+```
+取标题长度
+```
+<#if nggz.title?length gt 5>${nggz.title[0..5]}<#else>${nggz.title}</#if>
+```
+根据文章某个字段去读取某个栏目
+```
+<#assign jlevelcode =CA.fields.对应奖品栏目编号/>
+<#assign clevelcode =CA.fields.对应场区栏目编号/>
+<#assign huodongid =CA.fields.活动编码/>
+<#assign pid =CA.fields.平台编号/>
+<#list CMS_ARTICLE_LIST(jlevelcode,5,'AND|活动编码,=,'+huodongid) as a>
+```
+12. 编辑布局的语法
+新建布局shi新建布局时用于放入模块的div的编写为：<div class="droppable"></div>
+```
+<div><!--头部--><div class="bgfff droppable"></div><!--头部--><!--中间--><div class="droppable"></div><!--中间--><!--底部--><div class="droppable"></div><!--底部--></div>
+```
+
 
