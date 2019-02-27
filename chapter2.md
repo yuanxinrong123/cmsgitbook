@@ -167,7 +167,7 @@ switch,case,default,break
 </#switch>
 数字
 <#switch x>
-   <#case x = 1>    1
+  <#case x = 1>    1
   <#case x = 2>    2
   <#default>    d
 </#switch>  
