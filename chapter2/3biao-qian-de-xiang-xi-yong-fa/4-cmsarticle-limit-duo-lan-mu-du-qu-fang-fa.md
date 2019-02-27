@@ -10,7 +10,7 @@ columnSCope="many" order="top_5";limitList,page,total,pageCount,pre,next>
 * columnScope="many"  columnScope="sonson"  columnScope="son"   获取范围 </br>
 * order="top_5" order="level"; 排序方式</br>
 
-**其中：**
+其中：
 * 当columnScope=many，即栏目可以写多个column="00340001,00340002"可以写多个没有关联的栏目</br>
 * 当columnScope=sonson，即该栏目下所有子孙栏目下面的所有文章，包括本栏目</br>
 * 当columnScope=son，即该栏目下所有儿子栏目下面的所有文章，包括本栏目</br>
