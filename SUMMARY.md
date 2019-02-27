@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+
 * [一、CMS介绍](chapter1.md)
   * [1.CMS项目背景](chapter1/1cmsxiang-mu-bei-jing.md)
   * [2.CMS相关术语](chapter1/2cmsxiang-guan-zhu-yu.md)
