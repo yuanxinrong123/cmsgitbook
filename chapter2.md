@@ -326,5 +326,3 @@ ${str}
 ```
 <div><!--头部--><div class="bgfff droppable"></div><!--头部--><!--中间--><div class="droppable"></div><!--中间--><!--底部--><div class="droppable"></div><!--底部--></div>
 ```
-
-
