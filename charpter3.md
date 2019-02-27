@@ -1,4 +1,4 @@
-常用方法
+11. 常用方法<br/>
 数字循环
 ```
 1..5 表示从1到5，原型number..number
@@ -78,4 +78,40 @@ ${s?replace(‘ba’, ‘XY’ )}
 <#-- 
   这里是注释
 -->
+```
+生成导航
+```
+<#assign lg = CC.levelCode?length/4>
+  <#list 1..lg as x>
+    <#assign s=CC.levelCode?substring(0,4*x)>
+    <#assign str=str+C[s].name+'-'>
+  </#list>
+${str}
+```
+取标题长度
+```
+<#if nggz.title?length gt 5>${nggz.title[0..5]}<#else>${nggz.title}</#if>
+```
+根据文章某个字段去读取某个栏目
+```
+<#assign jlevelcode =CA.fields.对应奖品栏目编号/>
+<#assign clevelcode =CA.fields.对应场区栏目编号/>
+<#assign huodongid =CA.fields.活动编码/>
+<#assign pid =CA.fields.平台编号/>
+<#list CMS_ARTICLE_LIST(jlevelcode,5,'AND|活动编码,=,'+huodongid) as a>
+```
+12. 编辑布局的语法
+新建布局shi新建布局时用于放入模块的div的编写为：<div class="droppable"></div>
+```
+<div>
+  <!--头部-->
+  <div class="bgfff droppable"></div>
+  <!--头部-->
+  <!--中间-->
+  <div class="droppable"></div>
+  <!--中间-->
+  <!--底部-->
+  <div class="droppable"></div>
+  <!--底部-->
+  </div>
 ```
