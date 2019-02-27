@@ -73,10 +73,10 @@
 * SV&emsp;站点变量&emsp;```${SV['活动']['siteUrl']}```
 * CS&emsp;当前站点&emsp;```{CS.name}```
 * CSV&emsp;当前站点变量&emsp;```${CSV['siteUrl']}```
-* C&emsp;栏目&emsp;```${C[‘00010002'].name}```
+* C&emsp;栏目&emsp;```${C['00010002'].name}```
 * CV&emsp;栏目变量&emsp;```<#assign e =CV[00010002']/>${e['hello']}```
 * CC&emsp;当前栏目&emsp;```${CC.name}```
-* CCV&emsp;当前栏目变量&emsp;```${CCV['hello ']}```
+* CCV&emsp;当前栏目变量&emsp;```${CCV['hello']}```
 * SS&emsp;站点风格&emsp;```${SS}```
 
 &emsp;**只在内容模块中使用的标签**
