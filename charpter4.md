@@ -75,7 +75,18 @@ xml示例
 ```
 2. memcachedb.xml     如果用memcachedb则需要配置该文件内容
 ```
-
+```
+3. city.properties      该文件是配置“复制创建栏目”省市对应配置
+```
+```
+4. jdbc.properties      配置数据库地址
+```
+```
+5. log4j.xml      配置日志打印方式及位置
+```
+### 部署升级注意点
+> 
+ 1如果是迁移CMS要修改站点表的备份路径 2.如果数据库导入的是dmp数据包。表空间要一致 3.cms提供已做好例子。可以导入（表空间为CMSNEW）        Imp xxxx/xxx@xxxx file= zhongguoyidongcms.dmp fromuser=cmstest touser=xxxx        复制解压tymh2012.rar到ROOT下4. Cms5部署在weblogc11平台下需要注意点         把WEB-INF\lib\xalan-2.5.1.jar  删掉   Cms5部署在weblogc9平台下学要注意         把weblogic_9.xml 改称weblogic.xmlCms5部署在weblogc10平台下学要注意          mv xml-apis-2.0.2.jar xml-apis-2.0.2.jar.bak
 
 
 
