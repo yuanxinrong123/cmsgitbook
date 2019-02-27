@@ -1,4 +1,4 @@
-6. CMS_ARTICLE_PATH&emsp;文章路径
+6.CMS_ARTICLE_PATH&emsp;文章路径
 ```
 <a href="${CMS_ARTICLE_PATH('${e.id}','${a.id}')}" title="${a.title[0..16]}"  target="_blank">${a.title}</a>
 ```

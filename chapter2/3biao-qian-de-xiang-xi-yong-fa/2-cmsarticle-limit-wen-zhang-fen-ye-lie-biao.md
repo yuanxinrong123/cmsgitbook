@@ -1,4 +1,4 @@
-2. CMS_ARTICLE_LIMIT&emsp;文章分页列表
+2.CMS_ARTICLE_LIMIT&emsp;文章分页列表
 ```
 <div class="nrong2" id="limitPage">
   <@CMS_ARTICLELIMIT column="${CC.levelCode}" pageDisplay="10" uniqName="uniqName";limitList,page,total,pageCount,pre,next>

@@ -1,4 +1,4 @@
-1. CMS_ARTICLE_LIST&emsp;文章列表</br>
+1.CMS_ARTICLE_LIST&emsp;文章列表</br>
 ```
 <#assign e = C['00230005']>
   <#list CMS_ARTICLE_LIST('${e.id}',6) as a> 

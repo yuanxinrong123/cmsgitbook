@@ -1,4 +1,4 @@
-7. CMS_ARTICLE_LIST和CMS_ARTICLE_LIMIT列表过滤筛选功能（亮点功能）</br>
+7.CMS_ARTICLE_LIST和CMS_ARTICLE_LIMIT列表过滤筛选功能（亮点功能）</br>
 语法：'AND|title,=,你好|内容,like,中国|jiage,>=,2'</br>
 AND 是逻辑符号，所有条件是并的关系&&</br>
 OR  所有条件是或的关系||</br>

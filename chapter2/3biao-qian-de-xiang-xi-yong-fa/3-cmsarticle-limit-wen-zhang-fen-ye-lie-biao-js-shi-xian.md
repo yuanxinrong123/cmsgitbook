@@ -1,4 +1,4 @@
-3. CMS_ARTICLE_LIMIT&emsp;文章分页列表的另一个实现方式（js实现）</br>
+3.CMS_ARTICLE_LIMIT&emsp;文章分页列表的另一个实现方式（js实现）</br>
 使用js的实现方式需要引入实现分页的js文件
 ```
 <script type="text/javascript" src="/js/jquery.pagination.js"></script>

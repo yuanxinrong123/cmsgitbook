@@ -1,4 +1,4 @@
-10. 语法介绍<br/>
+10.语法介绍<br/>
 if,else,elseif<br/>
 ```
 <#if x = 1>  x is 1 </#if>
