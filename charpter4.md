@@ -1,0 +1,66 @@
+## 三、开发人员培训
+### CMS技术架构图
+### Ajax技术
+&emsp;&emsp;数据处理等都交给Ajax引擎处理，只有确定需要从服务器读取新数据时再由Ajax引擎代为向服务器提交请求。这样就把一些服务器负担的工作 转嫁到客户端，利用客户端闲置的处理能力来处理，减轻服务器和带宽的负担，从而达到节约ISP的空间及带宽租用成本的目的。
+### SSH框架的使用
+&emsp;&emsp;SSH为Struts+Spring+Hibernate的组成方式，Struts实现MVC，Spring负责架构的结合，Hibernate进行数据的持久化。通常其分层开发的结构图(以一个业务新增为例)如下：
+### 作业调度框架
+&emsp;&emsp;Quartz框架的核心是调度器。调度器负责管理Quartz应用运行时环境。调度器不是靠自己做所有的工作，而是依赖框架内一些非常重要的部件。Quartz不仅仅是线程和线程管理。为确保可伸缩性，Quartz采用了基于多线程的架构。启动时，框架初始化一套worker线程，这套线程被调度器用来执行预定的作业。这就是Quartz怎样能并发运行多个作业的原理。Quartz依赖一套松耦合的线程池管理部件来管理线程环境。本片文障中，我们会多次提到线程池管理，但Quartz里面的每个对象是可配置的或者是可定制的。
+### JQuery
+### HttpClient
+### Lucene
+### Freemarker
+### Memcache
+### LRUMAP
+### CKEDITOR
+### CMS包结构图
+### 应用结构图
+### 数据库设计图
+
+> 
+> CMS_ARTICLE 文章基本表
+> CMS_APP  应用程序表
+> CMS_ARTICLE_LIMIT  文章约束表
+> CMS_PLUGINS 插件管理表
+> CMS_COLUMN  栏目表
+> CMS_ARTCLE_PIC 文章图片表
+> CMS_COLUMN_VAR 栏目变量表
+> CMS_ARTCLE_LOG  文章日志表
+> CMS_FILED_CLOB 大字段表
+> CMS_ARTCLE_VADIO 文章视频表
+> CMS_FILED_TEXT 基本字段表
+> CMS_PUB_LOG 任务操作记录日志表
+> CMS_COLUMN_ARTICLE 栏目文章对应关系表
+> CMS_PUB_TASKS  发布任务表
+> CMS_FORM_FILED_DEFINE 表单定义表
+> CMS_PD         流程表
+> CMS_RESOURCE   资源表
+> CMS_ROLE_COLUMN_AUTH  角色对应栏目数据权限表
+> CMS_ROLE       角色表
+> CMS_PUB_DETAIL_LOG 任务操作详细表
+> CMS_FUNC 功能表
+> CMS_LAYOUT  布局定义表
+> CMS_COLUMN_TEMPLATE_VAR_VALUE 栏目模板变量设置表
+> CMS_SITE 站点CMS_COLUMN_TEMPLATES 栏目模板表
+> CMS_TEMPLATE_MODULES 模版模块关联关系配置表
+> CMS_MODULE 模块
+> CMS_TEMPLATE_MODULE_VAR 模版变量设置表
+> CMS_MODULE_VAR 模块变量
+> CMS_SITE_CONFIG 站点信息配置表
+> CMS_TEMPLATE_DEF 模版定义表
+> CMS_SITE_VAR 站点变量
+> CMS_FAVORITE_MENU 用户常用应用
+> CMS_PLUGIN_EYE_ADS 点睛广告管理
+> CMS_FORM 表单
+> CMS_ROLE_FUNC_AUTH 角色功能关联表
+> CMS_PLUGIN_COMMENT 评论管理
+> CMS_SITE_STYLE站点风格表
+
+### 接入BMS系统
+CMS 系统可接入权限管理系统（BMS）。 通过权限系统传过来的用户。来判断是否存在，不存在自动创建，可根据传过来的权限来自动创建cms系统相应的角色
+
+
+
+
+
+
