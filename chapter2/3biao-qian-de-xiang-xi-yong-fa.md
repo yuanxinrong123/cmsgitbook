@@ -20,7 +20,7 @@
 `<#list CMS_ARTICLE_LIST '${e.levelcode}',6) as a>` 先声明栏目变量e</br>
 `<#list CMS_ARTICLE_LIST '${CC.levelcode}',6) as a>` 当前栏目</br>
 
-2. CMS_ARTICLE_LIMIT文章分页列表
+2. CMS_ARTICLE_LIMIT&emsp;文章分页列表
 ```
 <div class="nrong2" id="limitPage">
   <@CMS_ARTICLELIMIT column="${CC.levelCode}" pageDisplay="10" uniqName="uniqName";limitList,page,total,pageCount,pre,next>
@@ -52,7 +52,7 @@
   }
 </script>
 ```
-3. CMS_ARTICLE_LIMTI&emsp;文章分页列表的另一个实现方式（js实现）</br>
+3. CMS_ARTICLE_LIMIT&emsp;文章分页列表的另一个实现方式（js实现）</br>
 使用js的实现方式需要引入实现分页的js文件
 ```
 <script type="text/javascript" src="/js/jquery.pagination.js"></script>

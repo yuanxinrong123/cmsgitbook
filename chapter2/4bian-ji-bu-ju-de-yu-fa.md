@@ -1,4 +1,5 @@
 ### 4.编辑布局的语法
+
 新建布局shi新建布局时用于放入模块的div的编写为：<br/>
 `<div class="droppable"></div>`
 ```
