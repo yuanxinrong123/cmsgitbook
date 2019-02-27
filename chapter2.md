@@ -177,5 +177,16 @@ list,break<br/>
 <#assign seq = ["winter", "spring", "summer", "autumn"]>
 <#list seq as x>
   ${x_index + 1}. ${x}<#if x_has_next>,</#if>
-</#list> 
+</#list>
 ```
+list,break<br/>
+```
+item_index：是list当前值的下标item_has_next：判断list是否还有值
+```
+assign<br/>
+```
+生成变量，并且给变量赋值给season赋予序列值
+<#assign seasons = ["winter", "spring", "summer", "autumn"]>
+给变量test加1<#assign test = test + 1>
+```
+
