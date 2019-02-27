@@ -16,3 +16,10 @@ ${var?default(“hello world<br>”)?html}如果var is null那么将会被hello 
 <#else>
 也可以直接${mouse?if_exists})输出布尔形
 ```
+常用格式化日期
+```
+openingTime必须是Date型,详细查看freemarker文档 Reference->build-in referece->build-in for date
+${openingTime?date}
+${openingTime?date_time}
+${openingTime?time}
+```
