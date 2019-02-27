@@ -1,0 +1,16 @@
+### 2.技术介绍
+### Ajax技术
+&emsp;&emsp;数据处理等都交给Ajax引擎处理，只有确定需要从服务器读取新数据时再由Ajax引擎代为向服务器提交请求。这样就把一些服务器负担的工作 转嫁到客户端，利用客户端闲置的处理能力来处理，减轻服务器和带宽的负担，从而达到节约ISP的空间及带宽租用成本的目的
+
+### SSH框架的使用
+&emsp;&emsp;SSH为Struts+Spring+Hibernate的组成方式，Struts实现MVC，Spring负责架构的结合，Hibernate进行数据的持久化。通常其分层开发的结构图(以一个业务新增为例)如下：
+![](/images/ssh.png)
+### 作业调度框架
+&emsp;&emsp;Quartz框架的核心是调度器。调度器负责管理Quartz应用运行时环境。调度器不是靠自己做所有的工作，而是依赖框架内一些非常重要的部件。Quartz不仅仅是线程和线程管理。为确保可伸缩性，Quartz采用了基于多线程的架构。启动时，框架初始化一套worker线程，这套线程被调度器用来执行预定的作业。这就是Quartz怎样能并发运行多个作业的原理。Quartz依赖一套松耦合的线程池管理部件来管理线程环境。本片文障中，我们会多次提到线程池管理，但Quartz里面的每个对象是可配置的或者是可定制的。
+### JQuery
+### HttpClient
+### Lucene
+### Freemarker
+### Memcache
+### LRUMAP
+### KEDITOR
