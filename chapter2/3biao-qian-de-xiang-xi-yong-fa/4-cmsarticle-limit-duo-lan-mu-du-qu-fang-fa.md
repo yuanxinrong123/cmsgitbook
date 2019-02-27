@@ -1,6 +1,8 @@
 4.CMS_ARTICLE_LIMIT多栏目读取方法</br>
 ```
-<@CMS_ARTICLE_LIMIT column="00340001,00340002" pageDisplay="10" uniqName="uniqName" currentColumn="${CC.levelCode}" columnSCope="many" order="top_5";limitList,page,total,pageCount,pre,next>
+<@CMS_ARTICLE_LIMIT column="00340001,00340002" 
+pageDisplay="10" uniqName="uniqName" currentColumn="${CC.levelCode}" 
+columnSCope="many" order="top_5";limitList,page,total,pageCount,pre,next>
 ```
 在分页某单个栏目下文章，我们还可以使用以前的那样写法
 新增的属性有：</br>
