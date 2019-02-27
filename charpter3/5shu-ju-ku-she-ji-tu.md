@@ -1,6 +1,6 @@
 ### 5.数据库设计图
 ![](/images/database.png)
-> 
+
 > CMS_ARTICLE 文章基本表
 > CMS_APP  应用程序表
 > CMS_ARTICLE_LIMIT  文章约束表

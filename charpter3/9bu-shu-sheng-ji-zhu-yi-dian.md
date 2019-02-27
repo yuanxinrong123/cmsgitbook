@@ -3,7 +3,7 @@
 1.如果是迁移CMS要修改站点表的备份路径 
 2.如果数据库导入的是dmp数据包。表空间要一致 
 3.cms提供已做好例子。可以导入（表空间为CMSNEW）
-Imp xxxx/xxx@xxxx file= zhongguoyidongcms.dmp fromuser=cmstest touser=xxxx
+`Imp xxxx/xxx@xxxx file= zhongguoyidongcms.dmp fromuser=cmstest touser=xxxx`
 复制解压tymh2012.rar到ROOT下
 
 4.
