@@ -52,3 +52,30 @@ var?cap_first
 ```
 var?uncap_first
 ```
+去掉字符串前后空格
+```
+var?trim
+```
+每个单词的首字符大写
+```
+var?capitalize
+```
+类似String.indexof: 
+```
+"babcdabcd"?index_of("abc") 返回1
+"babcdabcd"?index_of("abc",2) 返回5
+```
+类似String.lastIndexOf
+```
+last_index_of和String.lastIndexOf类似,同上
+```
+替换字符串 replace
+```
+${s?replace(‘ba’, ‘XY’ )}
+```
+注释标志
+```
+<#-- 
+  这里是注释
+-->
+```
