@@ -26,7 +26,8 @@
   });
 </script>
 ```
-其中：div的id："pagination"不能改变;</br>
-input的id:"pageNo"不能改变;</br>
-var funnames的名称"funnames"不能改变;</br>
-initPagination(${pre+1},${total},5)的三个参数，分别是当前页数，总条数，每页显示条数（要与标签中的pageDisplay的值保持一致，否则显示可能会有问题)。
+其中：
+* div的id："pagination"不能改变;</br>
+* input的id:"pageNo"不能改变;</br>
+* var funnames的名称"funnames"不能改变;</br>
+* initPagination(${pre+1},${total},5)的三个参数，分别是当前页数，总条数，每页显示条数（要与标签中的pageDisplay的值保持一致，否则显示可能会有问题)。
