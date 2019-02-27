@@ -23,3 +23,32 @@ ${openingTime?date}
 ${openingTime?date_time}
 ${openingTime?time}
 ```
+substring的用法
+```
+<#assign user=”hello jeen”>
+${user[0]}${user[4]}
+${user[1..4]}
+输出 :
+ho
+ello  
+```
+取得字符串的长度
+```
+var?length
+```
+大写输出字符
+```
+var?upper_case
+```
+小写输出字符
+```
+var?lower_case
+```
+首字母大写
+```
+var?cap_first
+```
+首字母小写
+```
+var?uncap_first
+```
