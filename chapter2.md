@@ -166,5 +166,9 @@ switch,case,default,break
   <#default>     This will be processed if it is neither
 </#switch>
 数字
-<#switch x>  <#case x = 1>    1  <#case x = 2>    2  <#default>    d</#switch>  
+<#switch x>
+   <#case x = 1>    1
+  <#case x = 2>    2
+  <#default>    d
+</#switch>  
 ```
