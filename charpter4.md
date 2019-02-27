@@ -57,7 +57,13 @@
 > CMS_SITE_STYLE站点风格表
 
 ### 接入BMS系统
-CMS 系统可接入权限管理系统（BMS）。 通过权限系统传过来的用户。来判断是否存在，不存在自动创建，可根据传过来的权限来自动创建cms系统相应的角色
+&emsp;&emsp;CMS 系统可接入权限管理系统（BMS）。 通过权限系统传过来的用户。来判断是否存在，不存在自动创建，可根据传过来的权限来自动创建cms系统相应的角色。
+
+### 同步接口-参数说明
+
+```
+xml示例        接口地址 http://ip:post/cms/info/syncDataArticle.do   参数名称为datexml <infodate>      <!--//cms站点的存储目录  -->      <sitestoredir>mh</sitestoredir>      <!--//操作类型 add增加 update 修改 del 删除  update_1(福建更新策略：先删后插)-->      <optype>update</optype>       <!-- //EDIT = 编辑; APPROVED = 待发布-->      <state>APPROVED</state>       <!-- //栏目id，由cms提供，可以同时同步到不同栏目下，以逗号分割。100000006924,100000006925 -->      <columid>100000006924</columid>       <!-- 文章标题 -->      <title>外部数据接口</title>       <!-- 关键词 -->      <keywords>你好北京海南</keywords>	<!-- 简介 -->      <summary>外部数据接口外部数据接口</summary>      <!-- 来源网站 -->       <outsidesite>www.10010.com</outsidesite>      <!-- 来源的文章id -->      <outsideid>123456789</outsideid>      <!-- 密码：outsidesite + 当前时间XXXX-XX-XX 进行md5加密  加密。注：要保证两个系统的日期一致-->      <pwd>zxcasdqwefdsjljsdlfjiew</pwd>
+```
 
 
 
