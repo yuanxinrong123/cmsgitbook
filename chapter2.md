@@ -1,4 +1,4 @@
-## 二、CMS模板人员创建
+## 二、CMS模板人员培训
 ### 1.自定义标签
 * CMS_ARTICLE_LIST&emsp;文章列表
 * CMS_ARTICLE_LIMIT&emsp;文章分页列表
